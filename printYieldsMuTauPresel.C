@@ -8,15 +8,18 @@ double yieldHisto(TFile* file, TString name,double xmin, double xmax, double &er
 void printYieldsMuTauPresel(){
 
         printf("GG category \n");
-        getYields("MuTauPresel_June9/GG_collMass_PRESEL.root","ggmutau",50,300,false);
+        //getYields("MuTauPresel_June9/GG_collMass_PRESEL.root","ggmutau",50,300,false);
+	getYields("preselection_Nov9_SSFakes/LFV_gg0_collMass_fakeRate_zjetsEmbed_newSignal.root","vbfmutau",0,100,true);
         printf("\n\n");
 
         printf("Boosted category \n");
-        getYields("MuTauPresel_June9/Boosted_collMass_PRESEL.root","ggmutau",50,300,false);
+        //getYields("MuTauPresel_June9/Boosted_collMass_PRESEL.root","ggmutau",50,300,false);
+        getYields("preselection_Nov9_SSFakes/LFV_gg1_collMass_fakeRate_zjetsEmbed_newSignal.root","vbfmutau",0,100,true);
         printf("\n\n");
 
         printf("VBF category \n");
-        getYields("MuTauPresel_June9/LFV_vbf_collMass_type1_fakeRate_zjetsEmbed_newSignal_PRESEL.root","vbfmutau",50,300,true);
+        //getYields("MuTauPresel_June9/LFV_vbf_collMass_type1_fakeRate_zjetsEmbed_newSignal_PRESEL.root","vbfmutau",50,300,true);
+        getYields("preselection_Nov9_SSFakes/LFV_vbf_collMass_fakeRate_zjetsEmbed_newSignal.root","vbfmutau",0,100,true);
 
 }
 

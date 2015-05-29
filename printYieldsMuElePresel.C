@@ -3,21 +3,21 @@
 #include <TH1.h>
 
 
-void getYields(TString name,TString dir, double xmin, double xmax, bool, VBF, bool GG);
+void getYields(TString name,TString dir, double xmin, double xmax, bool VBF, bool GG);
 double yieldHisto(TFile* file, TString name,double xmin, double xmax, double &error);
 
 void printYieldsMuElePresel(){
 
-	//printf("GG category \n"); 
-	//getYields("MuElePresel_June9/GGF_rootfile.root","GGF",50,300,false,true);
-        //printf("\n\n");
+	printf("GG category \n"); 
+	getYields("MuElePresel_June9/GGF_rootfile.root","GGF",0,100,false,true);
+        printf("\n\n");
 
-        //printf("Boost category \n");
-        //getYields("MuElePresel_June9/Boost_rootfile.root","Boost",50,300,false,false);
-        //printf("\n\n");
+        printf("Boost category \n");
+        getYields("MuElePresel_June9/Boost_rootfile.root","Boost",0,100,false,false);
+        printf("\n\n");
 
         printf("VBF category \n");
-        getYields("MuElePresel_June9/VBF_rootfile.root","VBF",50,300,true,false);
+        getYields("MuElePresel_June9/VBF_rootfile.root","VBF",0,100,true,false);
         printf("\n\n");
 
 }
